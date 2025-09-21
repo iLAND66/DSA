@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     copiarArreglo(arr, arrInsertion, n);
     copiarArreglo(arr, arrMerge, n);
 
-    /*clock_t startBubble, endBubble;
+    clock_t startBubble, endBubble;
     double timeBubble;
 
     startBubble = clock();
@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
     insertionSort(arrInsertion, n);
     endInsertion = clock();
     timeInsertion = (double)(endInsertion - startInsertion) / CLOCKS_PER_SEC;
-    printf("Tiempo Insertion Sort: %f segundos\n", timeInsertion);*/
+    printf("Tiempo Insertion Sort: %f segundos\n", timeInsertion);
 
     clock_t startMerge, endMerge;
     double timeMerge;
