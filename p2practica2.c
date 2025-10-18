@@ -62,6 +62,7 @@ int main(){
                 printf("Opcion incorrecta\n");
         }
     } while (opcion != 4);
+    return 0;
 }
 
 int create(struct Stack *s){
