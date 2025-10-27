@@ -14,18 +14,19 @@ element isEmpyDS(node *t) {
 }
 
 element pushDS(node **t, element a) {
-    node *new;
-    new = (node*)malloc(sizeof(node));
-    new->e=a;
+    node *new = (node*)malloc(sizeof(node));
+    new->e = a;
+    new->next = *t;
+    *t = new;
+    return a;
 }
 
 element popDS(node **s) {
     element a;
     node *aux;
     if (isEmpyDS(*s)){
-        printf("Error de underflow\n");
-        a = -1;
-        return a;
+        printf("Error de underflow");
+        a = -1; return a;
     } else if ((*s)->next==NULL) {
         a = (*s)->e;
         free(*s);
@@ -40,15 +41,20 @@ element popDS(node **s) {
     }
 }
 
-void liberarPila(node **s) {
-    node *top = *s;
-    node *next;
-
-    while (top != NULL) {
-        next = top->next;
-        free(top);
-        top = next;
+void imprimirDS(node *t) {
+    while (t != NULL) {
+        printf("%d", t->e);
+        t = t->next;
     }
+    printf("\n");
+}
 
+void liberarPila(node **s) {
+    node *actual = *s;
+    while (actual != NULL) {
+        node *sig = actual->next;
+        free(actual);
+        actual = sig;
+    }
     *s = NULL;
 }

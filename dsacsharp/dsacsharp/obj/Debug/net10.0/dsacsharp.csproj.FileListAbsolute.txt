@@ -1,0 +1,15 @@
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\bin\Debug\net10.0\dsacsharp.exe
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\bin\Debug\net10.0\dsacsharp.deps.json
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\bin\Debug\net10.0\dsacsharp.runtimeconfig.json
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\bin\Debug\net10.0\dsacsharp.dll
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\bin\Debug\net10.0\dsacsharp.pdb
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.GeneratedMSBuildEditorConfig.editorconfig
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.AssemblyInfoInputs.cache
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.AssemblyInfo.cs
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.csproj.CoreCompileInputs.cache
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.sourcelink.json
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.dll
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\refint\dsacsharp.dll
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.pdb
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\dsacsharp.genruntimeconfig.cache
+E:\iLAND66\Programacion\DSA\dsacsharp\dsacsharp\obj\Debug\net10.0\ref\dsacsharp.dll
