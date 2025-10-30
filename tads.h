@@ -1,12 +1,12 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#define N 10  // Tamaño máximo de la cola
+#define n 10
 
 typedef char element;
 
-typedef struct {
-    element SQ[N];
+typedef struct squeue{
+    element SQ[n];
     int head;
     int tail;
 } squeue;
