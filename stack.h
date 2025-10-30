@@ -1,18 +1,20 @@
 #ifndef STACK_H
 #define STACK_H
 
+#define size 8
+
 typedef int element;
 
-typedef struct node {
-    element e;
-    struct node *next;
-} node;
+typedef struct Stack {
+    int top;
+    element Stack[size];
+} Stack;
 
-void createDS(node **t);
-element isEmpyDS(node *t);
-element pushDS(node **t, element a);
-element popDS(node **s);
-void imprimirDS(node *t);
-void liberarPila(node **s);
+
+int create(struct Stack *s);
+int isFull(struct Stack s);
+int isEmpty(struct Stack s);
+int push(struct Stack *s, element e);
+int pop(struct Stack *s);
 
 #endif
