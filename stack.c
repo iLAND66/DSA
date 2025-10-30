@@ -2,59 +2,45 @@
 #include <stdlib.h>
 #include "stack.h"
 
-void createDS(node **t){
-    *t = NULL;
+int create(struct Stack *s){
+    s->top=-1;
+    printf("Pila creada\n");
 }
 
-element isEmpyDS(node *t) {
-    if (t == NULL)
+int isFull(struct Stack s){
+    if(s.top==size-1){
+        //printf("si\n");
         return 1;
-    else
-        return 0;
-}
-
-element pushDS(node **t, element a) {
-    node *new = (node*)malloc(sizeof(node));
-    new->e = a;
-    new->next = *t;
-    *t = new;
-    return a;
-}
-
-element popDS(node **s) {
-    element a;
-    node *aux;
-    if (isEmpyDS(*s)){
-        printf("Error de underflow");
-        a = -1; return a;
-    } else if ((*s)->next==NULL) {
-        a = (*s)->e;
-        free(*s);
-        *s = NULL;
-        return a;
     } else {
-        a = (*s)->e;
-        aux = (*s)->next;
-        free(*s);
-        (*s) = aux;
-        return a;
+    //printf("no\n");
     }
 }
 
-void imprimirDS(node *t) {
-    while (t != NULL) {
-        printf("%d", t->e);
-        t = t->next;
+int isEmpty(struct Stack s){
+    if(s.top==-1) {
+        //printf("si\n");
+        return 1;
     }
-    printf("\n");
+    else {
+        //printf("no\n");
+        return 0;
+    }
 }
 
-void liberarPila(node **s) {
-    node *actual = *s;
-    while (actual != NULL) {
-        node *sig = actual->next;
-        free(actual);
-        actual = sig;
+int push(struct Stack *s, element e){
+    if(isFull(*s)== 1)
+        printf("Error de overflow\n");
+    else{
+        s->top++;
+        s->Stack[s->top]=e;
     }
-    *s = NULL;
+}
+
+int pop(struct Stack *s){
+    if(isEmpty(*s))
+        printf("Error de underflow\n");
+    else{
+        s->top--;
+        return s->Stack[s->top+1];
+    }
 }
