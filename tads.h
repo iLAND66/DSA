@@ -11,13 +11,24 @@ typedef struct squeue{
     int tail;
 } squeue;
 
-void create(squeue *Q);
-int isEmpty(squeue Q);
-int isFull(squeue Q);
+void createQueue(squeue *Q);
+int isEmptyQueue(squeue Q);
+int isFullQueue(squeue Q);
 int next(int i);
 void enqueue(squeue *Q, element a);
 element dequeue(squeue *Q);
 void deleteQueue(squeue *Q);
 void imprimir(squeue Q);
+
+typedef struct stack{
+    int top;
+    element stack[n];
+} stack;
+
+void createStack(struct stack *s);
+int isEmptyStack(struct stack s);
+int isFullStack(struct stack s);
+void push(struct stack *s, element a);
+element pop(struct stack *s);
 
 #endif
