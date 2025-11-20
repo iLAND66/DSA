@@ -6,7 +6,7 @@ typedef int elementDL;
 
 typedef struct nodeDL{
     struct nodeDL *next;
-    struct nodeDLde *prev;
+    struct nodeDL *prev;
     elementDL e;
 }nodeDL;
 
@@ -76,10 +76,9 @@ elementDL deleteNodeiDL(dlist *DL, int i){ //O(n)
         printf("Error: lista doble vacia\n");
         return -1;
     }
-    nodeDL *aux = DL->head;
-    elementDL a;
     if (i == 1)
         return deleteFirstDL(DL);
+    nodeDL *aux = DL->head;
     int cont = 1;
     while (cont < i && aux != NULL){
         aux = aux->next;
@@ -91,9 +90,11 @@ elementDL deleteNodeiDL(dlist *DL, int i){ //O(n)
     }
     if (aux->next == NULL)
         return deleteLastDL(DL);
-    a = aux->e;
-    aux->prev->next = aux->next;
-    aux->next->prev = aux->prev;
+    elementDL a = aux->e;
+    if (aux->prev != NULL)
+        aux->prev->next = aux->next;
+    if (aux->next != NULL)
+        aux->next->prev = aux->prev;
     free(aux);
 
     return a;
